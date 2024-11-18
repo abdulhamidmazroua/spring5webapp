@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific product
+  name:
+    type: string
+    description: Name of the Product
+  description:
+    type: string
+    description: Short description about the product
+  price:
+    type: number

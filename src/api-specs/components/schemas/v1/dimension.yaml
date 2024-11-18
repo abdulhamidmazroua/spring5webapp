@@ -1,0 +1,19 @@
+type: object
+properties:
+  width:
+    type: integer
+    description: Width of the product
+  height:
+    type: integer
+    description: Height of the product
+  depth:
+    type: integer
+    description: Depth of the product
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date of creation
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date of update

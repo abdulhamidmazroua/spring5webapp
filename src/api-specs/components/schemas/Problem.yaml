@@ -1,0 +1,28 @@
+type: object
+properties:
+  type:
+    type: string
+    format: uri
+    example: "https://example.com/errors/not-found"
+    description: A URI reference that identifies the problem type
+  title:
+    type: string
+    example: "Resource Not Found"
+    description: A short, human-readable summary of the problem
+  status:
+    type: integer
+    example: 404
+    description: HTTP status code
+  detail:
+    type: string
+    example: "The requested resource was not found."
+    description: A human-readable explanation of the problem
+  instance:
+    type: string
+    format: uri
+    example: "/customers/12345"
+    description: A URI reference to the specific occurrence of the problem
+required:
+  - type
+  - title
+  - status

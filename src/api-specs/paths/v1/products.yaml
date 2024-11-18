@@ -1,16 +1,16 @@
 get:
   tags:
-    - Customer
-  summary: Get a list of customers
-  description: Get a list of customers
-  operationId: listCustomers
+    - Product
+  summary: Get the list of products
+  description: Get the list of the available products
+  operationId: listProducts
   responses:
     '200':
       description: Success
       content:
         application/json:
           schema:
-            $ref: '../../components/schemas/v1/customer_list.yaml'
+            $ref: '../../components/schemas/v1/product_list.yaml'
     '404':
       description: Not Found
       content:

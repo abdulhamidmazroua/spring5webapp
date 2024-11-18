@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific product
+  name:
+    type: string
+    description: Name of the Product
+  description:
+    type: string
+    description: Short description about the product
+  images:
+    type: array
+    items:
+      $ref: image.yaml
+    description: The list of image URLs
+  dimensions:
+    ref: $dimension.yaml
+  price:
+    type: number
+  cost:
+    type: number
+  categories:
+    type: array
+    items:
+      $ref: category.yaml
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date of creation
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date of update
