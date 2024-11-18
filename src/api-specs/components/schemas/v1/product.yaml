@@ -4,32 +4,40 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific product
+    readOnly: true
   name:
     type: string
     description: Name of the Product
+    example: IPHONE 15 PRO MAX
   description:
     type: string
     description: Short description about the product
+    nullable: true
   images:
     type: array
     items:
       $ref: image.yaml
     description: The list of image URLs
+    nullable: true
   dimensions:
     ref: $dimension.yaml
   price:
     type: number
+    example: 1234.212
   cost:
     type: number
+    example: 900
   categories:
     type: array
     items:
       $ref: category.yaml
   dateCreated:
-    type: string
-    format: date-time
-    description: The date of creation
+    $ref: ../common/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: The date of update
+    $ref: ../common/iso_timestamp.yaml
+required:
+  - name
+  - categories
+  - dimensions
+  - price
+  - cost

@@ -31,15 +31,9 @@ properties:
         items:
             $ref: payment_method.yaml
     dateCreated:
-        type: string
-        format: date-time
-        description: The date of creation
-        readOnly: true
+        $ref: ../common/iso_timestamp.yaml
     dateUpdated:
-        type: string
-        format: date-time
-        description: The date of update
-        readOnly: true
+        $ref: ../common/iso_timestamp.yaml
 required:
     - name
     - shipToAddress

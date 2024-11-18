@@ -9,11 +9,7 @@ properties:
   depth:
     type: integer
     description: Depth of the product
-  dateCreated:
-    type: string
-    format: date-time
-    description: The date of creation
-  dateUpdated:
-    type: string
-    format: date-time
-    description: The date of update
+    nullable: true
+required:
+  - width
+  - height

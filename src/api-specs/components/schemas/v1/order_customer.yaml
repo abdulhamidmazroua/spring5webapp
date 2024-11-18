@@ -12,5 +12,11 @@ properties:
     $ref: address.yaml
   phone:
     type: string
+    nullable: true
   selectedPaymentMethod:
       $ref: payment_method.yaml
+required:
+  - name
+  - shipToAddress
+  - billToAddress
+  - selectedPaymentMethod

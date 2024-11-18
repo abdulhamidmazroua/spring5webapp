@@ -15,3 +15,27 @@ get:
       description: Bad Request
     '404':
       description: Not Found
+post:
+  tags:
+    - Order
+  summary: Create a new order
+  description: Create a new order
+  operationId: createOrder
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/schemas/v1/order.yaml
+  responses:
+    '201':
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/v1/order.yaml
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/Problem.yaml'

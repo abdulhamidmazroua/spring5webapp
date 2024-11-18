@@ -4,12 +4,14 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific product category
+    readOnly: true
   code:
     type: string
     description: Category Code
   description:
     type: string
     description: Category Description
+    nullable: true
   dateCreated:
     type: string
     format: date-time
@@ -18,3 +20,5 @@ properties:
     type: string
     format: date-time
     description: The date of update
+required:
+  - code
