@@ -4,31 +4,37 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific customer
+    readOnly: true
   addressLine1:
     type: string
     description: Address Line
     maxLength: 100
     minLength: 3
+    example: 123 Main Street
   addressLine2:
     type: string
     description: Address Line 2
     maxLength: 100
     minLength: 3
+    nullable: true
   city:
     type: string
     description: City
     maxLength: 100
     minLength: 2
+    example: St Petersburg
   state:
     type: string
     description: 2 characters state code
     maxLength: 2
     minLength: 2
+    example: FL
   zip:
     type: string
     description: Zip Code
     maxLength: 10
     minLength: 5
+    example: 33701
 required:
   - addressLine1
   - city

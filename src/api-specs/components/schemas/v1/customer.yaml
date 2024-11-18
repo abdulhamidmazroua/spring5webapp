@@ -4,6 +4,7 @@ properties:
         type: string
         format: uuid
         description: Unique identifier representing a specific customer
+        readOnly: true
     name:
         $ref: name.yaml
     shipToAddress:
@@ -14,10 +15,17 @@ properties:
         type: string
         maxLength: 255
         minLength: 3
+        example: test@example.com
+        nullable: true  # this is the first method to define a property as nullable
     phone:
         type: string
+#        type:
+#            - string
+#            - 'null' # this is another method to define a property as nullable
         maxLength: 15
         minLength: 7
+        example: (+20)10236482399
+        nullable: true
     paymentMethods:
         type: array
         items:
@@ -26,10 +34,12 @@ properties:
         type: string
         format: date-time
         description: The date of creation
+        readOnly: true
     dateUpdated:
         type: string
         format: date-time
         description: The date of update
+        readOnly: true
 required:
     - name
     - shipToAddress

@@ -5,21 +5,26 @@ properties:
     description: Name Prefix
     maxLength: 25
     minLength: 0
+    example: Mr.
+    nullable: true
   firstName:
     type: string
     description: The first name of the customer
     maxLength: 100
     minLength: 2
+    example: John
   lastName:
     type: string
     description: The last name of the customer
     maxLength: 100
     minLength: 2
+    example: Thompson
   suffix:
     type: string
     description: Name Suffix
     maxLength: 25
     minLength: 0
+    nullable: true
 required:
   - firstName
   - lastName
